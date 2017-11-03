@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <h3>Ionic Menu Starter</h3>
+  
+    <p>
+      If you get lost, the
+      <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+    </p>
+  
+    <button ion-button secondary menuToggle>Toggle Menu</button>
+  -->
+  <!--
+    <ion-slides #mySlider1>
+      <ion-slide>
+        <div [style.width]="uImgWidth" [style.height]="uImgHeight">
+          asas
+  
+          <img src="assets/img/article/m2.jpg" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="height:100% !important; width:100% !important">
+        </div>
+      </ion-slide>
+      <ion-slide>
+        kkkkkkkkk
+      </ion-slide>
+    </ion-slides>
+  
+  -->
+
+
+  <ion-slides id=myfeed1 #mySlider1 >
+
+    <ion-slide >
+
+      <ion-item-group class="wrapper" [style.width]="uImgWidth" [style.height]="uImgHeight">
+
+        <img src="assets/img/article/m2.jpg" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="height:100% !important; width:100% !important">
+
+        <div class="slider1-container">
+          <div class="slider1-meta-align">
+            <div class="slider1-meta-row">
+              <a href="category/photography/index.html" class="slider1-category">Photography</a>
+              <h3 class="slider1-title">
+                <a href="2015/09/24/td-post-celebrity-make-up-artist-gary-cockerill-shows-you-beauty-trick/index.html" rel="bookmark" title="Celebrity make-up artist Gary Cockerill shows you beauty trick">Celebrity make-up artist Gary Cockerill shows you beauty trick</a>
+              </h3>
+            </div>
+            <div class="slider1-info">
+              <span class="slider1-author-name">
+                <a href="author/admin/index.html">David Lee</a>
+                <span>-</span>
+              </span>
+              <span class="slider1-post-date">
+                <time class="entry-date updated td-module-date" datetime="2015-09-24T14:41:46+00:00">September 24, 2015</time>
+              </span>
+            </div>
+          </div>
+        </div>
+      </ion-item-group>
+
+      <ion-item-group class="wrapper" [style.width]="aImgWidth" [style.height]="aImgHeight">
+
+        <ion-slides id=myfeed #mySlider [ngClass]="setClass()">
+
+          <ion-slide *ngFor="let article of articles" (click)="openArticle(article)"  class="article-background">
+
+            <ion-item-group class="wrapper">
+
+              <img [src]="'assets/img/article/'+article.img" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="height:100% !important; width:100% !important">
+
+              <div class="slider1-container">
+                <div class="slider1-meta-align">
+                  <div class="slider1-meta-row">
+                    <a href="category/photography/index.html" class="slider1-category" *ngFor="let tag of article.tags">{{tag}}</a>
+                    <h3 class="slider1-title">
+                      <a href="2015/09/24/td-post-celebrity-make-up-artist-gary-cockerill-shows-you-beauty-trick/index.html" rel="bookmark" title="Celebrity make-up artist Gary Cockerill shows you beauty trick">{{article.title}}</a>
+                    </h3>
+                  </div>
+                  <div class="slider1-info">
+                    <span class="slider1-author-name">
+                      <a href="author/admin/index.html">{{article.author}}</a>
+                      <span>-</span>
+                    </span>
+                    <span class="slider1-post-date">
+                      <time class="entry-date updated td-module-date" datetime="2015-09-24T14:41:46+00:00">September 24, 2015</time>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ion-item-group>
+
+
+
+
+          </ion-slide>
+
+
+
+        </ion-slides>
+      </ion-item-group>
+
+
+
+
+
+    </ion-slide>
+<!--
+    <ion-slide id=myfeed #mySlider *ngFor="let article of articles" padding class="article-background">
+
+      <ion-item-group class="wrapper" [style.width]="aImgWidth">
+
+        <img [src]="'assets/img/article/'+article.img" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="height:100% !important; width:100% !important">
+
+        <div class="slider1-container">
+          <div class="slider1-meta-align">
+            <div class="slider1-meta-row">
+              <a href="category/photography/index.html" class="slider1-category" *ngFor="let tag of article.tags">{{tag}}</a>
+              <h3 class="slider1-title">
+                <a href="2015/09/24/td-post-celebrity-make-up-artist-gary-cockerill-shows-you-beauty-trick/index.html" rel="bookmark" title="Celebrity make-up artist Gary Cockerill shows you beauty trick">{{article.title}}</a>
+              </h3>
+            </div>
+            <div class="slider1-info">
+              <span class="slider1-author-name">
+                <a href="author/admin/index.html">{{article.author}}</a>
+                <span>-</span>
+              </span>
+              <span class="slider1-post-date">
+                <time class="entry-date updated td-module-date" datetime="2015-09-24T14:41:46+00:00">September 24, 2015</time>
+              </span>
+            </div>
+          </div>
+        </div>
+      </ion-item-group>
+
+     
+    </ion-slide>
+
+  -->
+
+
+
+  </ion-slides>
+
+</ion-content>
