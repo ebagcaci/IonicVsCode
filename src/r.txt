@@ -13,6 +13,8 @@ icon değiştirmek
 ionic cordova resources --icon
 
 ------
+++++++++
+
 
 user setting ekle
   "git.autofetch": true,
