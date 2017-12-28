@@ -1,13 +1,23 @@
+nativestorage eklemek
 https://ionicframework.com/docs/native/native-storage/
 $ ionic cordova plugin add cordova-plugin-nativestorage
 $ npm install --save @ionic-native/native-storage
 
 
 cordova özellikleri ile çalışmak
-
 ionic cordova platform add browser
 ionic cordova run browser
 ionic cordova run android
 
 icon değiştirmek
 ionic cordova resources --icon
+
+user setting ekle
+  "git.autofetch": true,
+    "workbench.statusBar.visible": true,
+    "git.path": "https://github.com/ebagcaci/IonicVsCode.git",
+    "git.enableSmartCommit": true,
+    "team.showWelcomeMessage": false
+
+    sync de hata alırsa
+    git remote add upstream https://github.com/ebagcaci/IonicVsCode.git
