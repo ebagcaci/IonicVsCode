@@ -1,0 +1,104 @@
+page-news {
+}
+    .news-title{
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 0 6px 0;
+    }
+    .news-title a {
+        color: #111;
+        text-decoration: none;
+    }
+    .news-excerpt{
+        font-size: 13px;
+        color: #777;
+        font-family: 'Open Sans',arial,sans-serif;
+        margin-top: 9px;
+    }
+
+
+    .news-list{
+        float: none;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .news-list-div{
+        padding-bottom: 26px;
+        position: relative;
+        webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        
+    }
+    .news-list-thumb{
+        position: absolute !important;
+        left: 0;
+        top: 0;
+        position: relative;
+        margin-bottom: 13px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+.news-list-item-details{
+    margin-left: 116px;
+    min-height: 70px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.news-list-item-details-title{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    margin: 0 0 6px 0;
+    font-family: 'Roboto',sans-serif;
+    color: #111;
+}
+.news-list-item-details-title a{
+    color: #111;
+}
+.news-list-item-details-info{
+    margin-bottom: 0;
+    min-height: 0;
+    font-family: 'Open Sans',arial,sans-serif;
+    font-size: 11px;
+    margin-bottom: 7px;
+    line-height: 1;
+    min-height: 17px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.news-list-item-details-date{
+    color: #aaa;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Open Sans',arial,sans-serif;
+    font-size: 11px;
+    margin-bottom: 7px;
+    line-height: 1;
+    min-height: 17px;
+}
+.news-list-item-details-entry-date{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #aaa;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    font-family: 'Open Sans',arial,sans-serif;
+    font-size: 11px;
+    margin-bottom: 7px;
+    line-height: 1;
+    min-height: 17px;
+}

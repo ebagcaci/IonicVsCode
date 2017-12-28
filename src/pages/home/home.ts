@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Slides, ModalController, Platform } from 'ionic-angular';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 @Component({
   selector: 'page-home',
@@ -26,7 +27,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, 
               public modalCtrl: ModalController,
-              public platform: Platform) {
+              public platform: Platform,
+              private nativeStorage: NativeStorage) {
 
                 platform.ready().then((readySource) => {
                   this.uImgWidth=(platform.width()-50) + "px";
@@ -108,6 +110,20 @@ export class HomePage {
  
  }
   ionViewDidLoad() {
+
+      this.nativeStorage.getItem('s_author')
+            .then((data) => {
+              if (data) {
+               console.log(data);
+              } else {
+               console.log('data boş')
+              }
+            }, (error) => {
+              
+            console.log('hata')
+            });     
+     
+
     console.log('Hello FeedPage Page');
   }
 

@@ -1,0 +1,19 @@
+<ion-header style="height:56px ">
+	<ion-navbar style="height:56px ">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<img class="footerImage" src="assets/site/logo-footer.png" alt="">
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content >
+
+    <ion-item *ngFor="let item of author">
+        <ion-label>{{item.AuthorName}}</ion-label>
+        <ion-checkbox [(ngModel)]="item.checked" (click)="authorChange($event, item)"></ion-checkbox>
+      </ion-item>
+
+
+</ion-content>

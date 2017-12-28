@@ -1,8 +1,28 @@
 page-list {
-.aa .swiper-slide{
-    height: auto !important
 }
-::-webkit-scrollbar{
-    display:none;
+    .bar-button-default-md{
+        color: white
     }
-}
+
+    .toolbar-background {
+    background-color:#222;
+    }
+
+    .toolbar-title {
+    color: white
+    }
+
+    .toolbar {
+    height: 50px
+    }
+
+    .footerImage{
+    max-height: 48px;
+    position: absolute;
+    bottom: 0;
+    top: 5px;
+    left: 0;
+    right: 40px;
+    padding: 0;
+    margin: auto;
+    }

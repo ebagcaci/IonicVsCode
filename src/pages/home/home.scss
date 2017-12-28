@@ -25,6 +25,8 @@ page-home { #myfeed .slides {
     .bar-button-default-md{
       color: white
     }
+    
+    /************ toolbar genel****************************/
     .toolbar-background {
       background-color:#222;
     }
@@ -32,7 +34,6 @@ page-home { #myfeed .slides {
       color: white
     }
     .toolbar {
-
       height: 50px
     }
     .footerImage{
@@ -41,10 +42,13 @@ page-home { #myfeed .slides {
       bottom: 0;
       top: 5px;
       left: 0;
-      right: 40px;
+      right: 0;
       padding: 0;
       margin: auto;
     }
+
+
+    /**************************************************************/
     .wrapper {
       position: relative;
      // height: 60%;

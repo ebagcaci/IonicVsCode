@@ -1,0 +1,75 @@
+<ion-header style="height:56px ">
+	<ion-navbar style="height:56px ">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<img class="footerImage" src="assets/site/logo-footer.png" alt="">
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding class="no-scroll">
+
+	<ion-card longPress (onSwipeUp)="onSwipeUp($event)" (onSwipeDown)="onSwipeDown($event)" [style.height]="myIndex.cardImgHeight"
+	 style="width: 100%; margin:0; box-shadow: none">
+
+
+		<div class="td-block-title-wrap" style="position: relative;">
+			<h4 class="block-title" style="    border-color: #7f8fa9;
+		font-family: 'Roboto',sans-serif;
+		font-size: 14px;
+		line-height: 1;
+		margin-top: 0;
+		margin-bottom: 26px;
+		border-bottom: 2px solid #222;">
+
+				<span class="td-pulldown-size" style="margin-right: 92px;">{{baslik}}</span>
+			</h4>
+
+		</div>
+		<ion-item-group *ngFor="let article of firstArticles1">
+			<ion-item-group *ngFor="let article of firstArticles1" class="wrapper" style="height:40%">
+				<img (click)="itemTapped1($event,article.link)" [src]="'http://' + article.thumbnail" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="height:100% !important; width:100% !important">
+			</ion-item-group>
+
+			<ion-item-group class="wrapper" style="height:20%">
+
+				<h3 class="news-title">
+					<a href="2015/09/24/td-post-gigabyte-geforce-gtx-950-review-pricing-is-everything/index.html" rel="bookmark" title="Gigabyte GeForce GTX 950 Review: Pricing Is Everything">
+						{{article.title}}
+					</a>
+				</h3>
+				<div class="news-excerpt">
+					{{article.description}} </div>
+
+			</ion-item-group>
+		</ion-item-group>
+		<ion-item-group  class="wrapper" style="height:40%">
+			<div *ngFor="let article of articles1"class="news-list">
+				<div class="news-list-div">
+					<div class="news-list-thumb">
+						<a (click)="itemTapped1($event,article.link)" rel="bookmark">
+							<img [src]="'http://' + article.thumbnail" style="width: 100px; height: 70px" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" 
+							 alt="" title="Lenovo Introduces Its Best Entertainment Tablets Yet">
+						</a>
+					</div>
+					<div class="news-list-item-details">
+						<h3 class="news-list-item-details-title">
+							<a href="2015/09/23/td-post-lenovo-introduces-its-best-entertainment-tablets-yet/index.html" rel="bookmark" title="Lenovo Introduces Its Best Entertainment Tablets Yet">{{article.title}}</a>
+						</h3>
+						<div class="news-list-item-details-info">
+							<span class="news-list-item-details-date">
+								<time class="news-list-item-details-entry-date" datetime="2015-09-23T12:42:03+00:00">{{article.pubDate}}</time>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		
+
+
+		</ion-item-group>
+
+
+	</ion-card>
+</ion-content>

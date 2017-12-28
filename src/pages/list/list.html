@@ -1,48 +1,67 @@
-<ion-header style="height:56px ">
-  <ion-navbar style="height:56px ">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content class="no-scroll">
-   
-    <ion-card [style.height]="oHeight" style="margin:0px;width:100%">
-
-      <ion-item-group class="wrapper" [style.width]="uImgWidth" [style.height]="uImgHeight">
-
-        <img src="assets/img/article/m2.jpg" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="height:100% !important; width:100% !important">
-      </ion-item-group>
-
-      <ion-item-group class="wrapper" [style.width]="aImgWidth" [style.height]="aImgHeight">
-        <ion-slides #mySlider (ionSlideDrag)="onIonDrag($event)">
-          <ion-slide *ngFor="let article of articles" (click)="openArticle(article)" class="article-background">
-
-            <ion-item-group class="wrapper">
-              <img [src]="'assets/img/article/'+article.img" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="height:100% !important; width:100% !important">
-
-            </ion-item-group>
-          </ion-slide>
-
-        </ion-slides>
-      </ion-item-group>
-    </ion-card>
 
 
-    <page-home-category></page-home-category>
 
-    <ion-card style="background-color: yellow">
+<ion-nav #myNav class="no-scroll" [root]="tab1">
 
-      fffffffffffffff
+  </ion-nav>
 
-    </ion-card>
-    <ion-card style="background-color: green">
-      ıııııııııııııııııııııııııı
-    </ion-card>
+<!-- <page-stories (uploaded)="someMethod($event)" [uImgWidth]="uImgWidth" [uImgHeight]="uImgHeight" [aImgWidth]="aImgWidth" [aImgHeight]="aImgHeight"></page-stories> -->
 
- 
+  <!-- <page-news [oHeight]="oHeight"></page-news>
+
+  <ion-card [style.height]="oHeight" style="box-shadow: none;margin:10px" style="background-color: yellow">
+
+    fffffffffffffff
+
+  </ion-card>
+
+  <ion-card [style.height]="oHeight" style="box-shadow: none;margin:10px" style="background-color: green">
+    ıııııııııııııııııııııııııı
+  </ion-card> -->
+
+
+
+  <!-- <ion-slides  #mySliderVertical>
+    <ion-slide>
+            <page-stories [uImgWidth]="uImgWidth" [uImgHeight]="uImgHeight" [aImgWidth]="aImgWidth" [aImgHeight]="aImgHeight"></page-stories>
+    </ion-slide>
+    <ion-slide>
+            <page-news [oHeight]="oHeight"></page-news>
+      </ion-slide>
+    <ion-slide>
+      <ion-card [style.height]="oHeight" style="box-shadow: none;margin:10px" style="background-color: yellow">
+
+        fffffffffffffff
+
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card [style.height]="oHeight" style="box-shadow: none;margin:10px" style="background-color: green">
+        ıııııııııııııııııııııııııı
+      </ion-card>
+    </ion-slide>
+  </ion-slides> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!--
 <ion-slides   (ionSlideDidChange)="SlideChanged()" #mySliderVertical [style.height]="oHeight">
     <ion-slide (didChange)="onIonDrag($event)">
@@ -92,4 +111,4 @@
     You navigated here from <b>{{selectedItem.title}}</b>
   </div>
 -->
-</ion-content>
+

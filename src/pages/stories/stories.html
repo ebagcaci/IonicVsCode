@@ -1,0 +1,81 @@
+
+<ion-header style="height:56px ">
+    <ion-navbar style="height:56px ">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <img class="footerImage" src="assets/site/logo-footer.png" alt="">
+    </ion-navbar>
+  </ion-header>
+
+<ion-content class="no-scroll">
+  
+  <ion-card longPress (onSwipeUp)="onSwipeUp($event)" 
+                      (onSwipeDown)="onSwipeDown($event)"
+                      [style.height]="myIndex.cardImgHeight" 
+                      style="width: 100%; margin:0; box-shadow: none">
+
+    <ion-item-group *ngFor="let article of firstArticles1" class="wrapper" [style.width]="uImgWidth" [style.height]="uImgHeight">
+
+      <img (click)="itemTapped1($event,article.link)" [src]="'http://' + article.thumbnail" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="height:100% !important; width:100% !important">
+
+      <div class="slider1-container">
+        <div class="slider1-meta-align">
+          <div class="slider1-meta-row">
+            <a href="category/photography/index.html" class="slider1-category">{{article.category}}</a>
+            <h3 class="slider1-title">
+              <a rel="bookmark" (click)="itemTapped1($event,article.link)">{{article.title}}</a>
+            </h3>
+          </div>
+          <div class="slider1-info">
+            <span class="slider1-author-name">
+              <a >{{article.author}}</a>
+              <span>-</span>
+            </span>
+            <span class="slider1-post-date">
+              <time class="entry-date updated td-module-date" datetime="2015-09-24T14:41:46+00:00">{{article.pubDate}}</time>
+            </span>
+          </div>
+        </div>
+      </div>
+    </ion-item-group>
+
+    <ion-item-group class="wrapper" style="    padding-top: 3px;    padding-bottom: 3px;" [style.width]="aImgWidth" [style.height]="aImgHeight">
+      <ion-slides id=myfeed #mySlider (ionSlideDrag)="onIonDrag($event)">
+        <ion-slide *ngFor="let article of articles1"  class="article-background">
+
+          <ion-item-group class="wrapper">
+            <!-- <img [src]="'assets/img/article/'+article.img" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="width:100% !important"
+              [style.height]="aImgHeight"> -->
+           
+              <img (click)="itemTapped1($event,article.link)" [src]="'http://' + article.thumbnail" object-fit="cover" object-fit-watch-mq="true" object-position="50% 50%" style="width:100% !important"
+              [style.height]="aImgHeight">
+
+            <div class="slider1-container">
+              <div class="slider1-meta-align">
+                <div class="slider1-meta-row">
+                  <!-- <a href="category/photography/index.html" class="slider1-category" *ngFor="let tag of article.tags">{{tag}}</a> -->
+                  <a  class="slider1-category" >{{article.category}}</a>
+                  <h3 class="slider1-title">
+                    <a  rel="bookmark" >{{article.title}}</a>
+                  </h3>
+                </div>
+                <div class="slider1-info">
+                  <span class="slider1-author-name">
+                    <a href="author/admin/index.html">{{article.author}}</a>
+                    <span>-</span>
+                  </span>
+                  <span class="slider1-post-date">
+                    <time class="entry-date updated td-module-date" datetime="2015-09-24T14:41:46+00:00">{{article.pubDate}}</time>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </ion-item-group>
+        </ion-slide>
+
+      </ion-slides>
+    </ion-item-group>
+
+  </ion-card>
+</ion-content>
