@@ -9,11 +9,14 @@
 
 
 <ion-content >
-
-    <ion-item *ngFor="let item of author">
+	<ion-list >
+	<ion-list-header>Medya seçim ve öncelik sıralama</ion-list-header>
+	<ion-item-group reorder="true" (ionItemReorder)="reorderItems($event)">
+	<ion-item *ngFor="let item of author">
         <ion-label>{{item.AuthorName}}</ion-label>
-        <ion-checkbox [(ngModel)]="item.checked" (click)="authorChange($event, item)"></ion-checkbox>
+        <ion-checkbox [(ngModel)]="item.Checked" (click)="authorChange($event, item)"></ion-checkbox>
       </ion-item>
-
+	</ion-item-group>
+	</ion-list>
 
 </ion-content>

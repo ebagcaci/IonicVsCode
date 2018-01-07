@@ -70,8 +70,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
     
   ],
   providers: [
-    {provide:"apiUrl",useValue:"http://www.bagcaci.somee.com/Publish/api/"},
-    //{provide:"apiUrl",useValue:"http://localhost:52400/api/"},
+    //{provide:"apiUrl",useValue:"http://www.bagcaci.somee.com/Publish/api/"},
+    {provide:"apiUrl",useValue:"http://localhost:52400/api/"},
     BrowserTab,
     StatusBar,
     SplashScreen,

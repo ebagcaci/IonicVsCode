@@ -10,6 +10,7 @@ import { CategoryListService } from '../../serviceprovider/categoryList.service'
 import { CategoryList } from '../../entities/categoryList';
 import { BrowsePage } from '../browse/browse';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { NewsService } from '../../serviceprovider/NewsService';
 //import { SwipeVertical } from '../../components/Directive/SwipeVerticalDirective';
 
 
@@ -17,7 +18,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 @Component({
   selector: 'page-stories',
   templateUrl: 'stories.html',
-  providers: [CategoryListService]
+  providers: [CategoryListService,NewsService]
 })
 export class StoriesPage {
 
@@ -44,6 +45,7 @@ export class StoriesPage {
     public navParams: NavParams,
     private myIndex: myIndex,
     private categoryListService: CategoryListService,
+    private newsService: NewsService,
     private nativeStorage: NativeStorage) {
 
     platform.ready().then((readySource) => {
@@ -195,7 +197,7 @@ export class StoriesPage {
 
   getCategoryList1(data) {
 
-    this.categoryListService.getServiceCategoryList()
+    this.newsService.getServiceNewsList(data)
     .subscribe(p => {
       this.articles1 = p.slice(1, 10);
       this.firstArticles1 = p.slice(0, 1);
@@ -204,6 +206,16 @@ export class StoriesPage {
 
   };
 
+  getCategoryList1eski(data) {
+
+    this.categoryListService.getServiceCategoryList()
+    .subscribe(p => {
+      this.articles1 = p.slice(1, 10);
+      this.firstArticles1 = p.slice(0, 1);
+    })
+
+
+  };
   getCategoryList() {
     
     this.nativeStorage.getItem('s_author')
@@ -212,7 +224,7 @@ export class StoriesPage {
         console.log(data[0])
         console.log(data[0].Id);
        console.log(data[0].authorName);
-       console.log(data.checked);
+       console.log(data.Checked);
        this.getCategoryList1(data);
 
       } else {

@@ -1,6 +1,7 @@
 export class Author {
 
-    id: number;
-    authorName: string; 
-    checked:boolean;
+    Id: number;
+    AuthorName: string; 
+    Checked:boolean;
+    OrderNo: number;
 }
